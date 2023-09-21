@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    {
+      "name": "LineHeight",
+      "className": "LineHeight",
+      "description": "行高。",
+      "path": "src/lineheight.ts",
+      "uiComponents": [
+        {
+          "name": "lineHeight",
+          "type": "Button",
+          "iconPath": "theme/icons/line-height.svg"
+        }
+      ]
+    },
+    {
+      "name": "DetailsBlock",
+      "className": "DetailsBlock",
+      "description": "可折叠区块。",
+      "path": "src/detailsblock.ts",
+      "uiComponents": [
+        {
+          "name": "detailsBlock",
+          "type": "Button",
+          "iconPath": "theme/icons/details.svg"
+        }
+      ]
+    },
+    {
+      "name": "TabsBlock",
+      "className": "TabsBlock",
+      "description": "页签。",
+      "path": "src/tabsblock.ts",
+      "uiComponents": [
+        {
+          "name": "tabsBlock",
+          "type": "Button",
+          "iconPath": "theme/icons/tabs.svg"
+        }
+      ]
+    }
+  ]
+}

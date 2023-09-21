@@ -1,0 +1,110 @@
+.ck-tabs-wrapper {
+  --color-active: #1677ff;
+  --color-border: #d9d9d9;
+  --color-content-bg: #fff;
+  --border-width: 1px;
+
+  margin: 10px 0;
+}
+
+.ck-tabs-nav {
+  display: flex;
+  padding-top: 1px;
+  padding-left: 1px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ck-tabs-title {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ck-tabs-title > p {
+  margin: 0;
+}
+
+.ck-tabs-title,
+.ck-tabs-add {
+  margin-right: calc(2px + var(--border-width) * 2);
+  padding: 8px 16px;
+  background: rgb(0 0 0 / 0.02);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 0 var(--border-width) var(--color-border);
+}
+
+.ck-tabs-title:first-of-type {
+  margin-left: 0;
+}
+
+.ck-tabs-title-active {
+  position: relative;
+  color: var(--color-active);
+  background-color: var(--color-content-bg);
+}
+
+.ck-tabs-title-active::after {
+  position: absolute;
+  right: 0;
+  bottom: calc(var(--border-width) * -1 - 2px);
+  left: 0;
+  z-index: 10;
+  height: calc(var(--border-width) + 2px);
+  background-color: var(--color-content-bg);
+  content: '';
+}
+
+.ck-tabs-remove {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  margin-right: -8px;
+  margin-left: 10px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXgiPjxwYXRoIGQ9Ik0xOCA2IDYgMTgiLz48cGF0aCBkPSJtNiA2IDEyIDEyIi8+PC9zdmc+');
+  background-position: center;
+  background-size: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.ck-tabs-remove:hover {
+  opacity: 1;
+}
+
+.ck-tabs-add {
+  order: 999;
+  margin: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsdXMiPjxsaW5lIHgxPSIxMiIgeDI9IjEyIiB5MT0iNSIgeTI9IjE5Ii8+PGxpbmUgeDE9IjUiIHgyPSIxOSIgeTE9IjEyIiB5Mj0iMTIiLz48L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+  cursor: pointer;
+}
+
+.ck-tabs-content {
+  background-color: var(--color-content-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-top: none;
+}
+
+.ck-tabs-panel {
+  display: none;
+  padding: 10px;
+}
+
+.ck-tabs-panel-active {
+  display: block;
+}
+
+.ck-tabs.ck-tabs-readonly .ck-tabs-title {
+  cursor: default;
+}
+
+.ck-tabs.ck-tabs-readonly .ck-tabs-remove {
+  display: none;
+}
+
+.ck-tabs.ck-tabs-readonly .ck-tabs-add {
+  display: none;
+}

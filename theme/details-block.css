@@ -1,0 +1,51 @@
+.ck-details-wrapper {
+  margin: 10px 0;
+}
+
+.ck-details {
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+}
+
+.ck-details-summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: #fafafa;
+}
+
+.ck-details-summary::marker {
+  display: none;
+  content: '';
+}
+
+.ck-details-summary > p {
+  flex: 1;
+  margin: 0;
+}
+
+.ck-details-trigger {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tcmlnaHQiPjxwb2x5bGluZSBwb2ludHM9IjkgMTggMTUgMTIgOSA2Ii8+PC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95%;
+  cursor: pointer;
+}
+
+.ck-details-trigger:hover {
+  background-color: rgb(0 0 0 / 0.08);
+  border-radius: 2px;
+}
+
+.ck-details[open='true'] .ck-details-trigger {
+  transform: rotateZ(90deg);
+}
+
+.ck-details-content {
+  padding: 10px;
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable"],
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "strict": true,
+    "module": "ES6",
+    "target": "ES2018",
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "typeRoots": ["typings", "node_modules/@types"]
+  },
+  "include": ["./sample", "./src", "./tests", "./typings"]
+}
